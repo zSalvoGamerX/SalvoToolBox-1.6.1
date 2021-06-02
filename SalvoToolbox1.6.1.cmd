@@ -27,7 +27,7 @@ echo 2. Salvo Speed up                                      6. Game Launchers
 echo 3. Disable Action Center                               7. Install Tools Need To Run Toolbox                                
 echo 4. Right click Take Ownership Menu                     8. Users Request                                          
 echo 5. Right Click Open Command Window here                9. Crack or Activation of apps
-echo 10. Try More Stuff                                                                                           
+echo 10. Try More Stuff                                     11.Themes for windows 10                                                                                          
 echo --------------------------------------------------------------------------------------------------------------------
 set choice=
 set /p choice=Type the number.
@@ -43,6 +43,7 @@ if '%choice%'=='7' goto 7
 if '%choice%'=='8' goto 11
 if '%choice%'=='9' goto 24
 if '%choice%'=='10' goto 5
+if '%choice%'=='11' goto themes
 :1
 title SalvoToolBox 1.6.1
 cls
@@ -804,3 +805,18 @@ SC CONFIG XboxGipSvc start = disabled
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 regsvr32 actxprxy.dll
 goto start
+:themes
+cls
+Echo 1. sonic
+echo 2. Roblox
+echo 3. Rocket League
+echo ---------------------------------------------------------------------------------------------------------------------
+echo 0. Back to menu
+set choice=
+set /p choice=Type the number.
+if not '%choice%'=='' set choice=%choice:~0,1%
+if '%choice%'=='1' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
+if '%choice%'=='2' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
+if '%choice%'=='3' taskkill /f /im explorer.exe & c:\windows\Tools\wget.exe -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
+if '%choice%'=='0' goto start
+goto themes
